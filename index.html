@@ -1,0 +1,44 @@
+<!-- put css stuff here-->
+<!-- deleted video here -->
+
+<html>    
+    
+
+    <head>
+
+        <link rel="stylesheet" href="styles.css">
+        <!-- specify character encoding for the html-->
+        <meta charset="UTF-8">
+
+        <!-- include required tensorflow scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+        <script src="scripts/lib/jquery.min.js"></script>
+        <!-- script for detection-->
+        <script src="detector.js" defer></script>
+
+       
+    </head>
+
+    <div class = "header">
+        <h1> Gesture Detection!</h1>
+    </div>
+    <body>
+        
+        
+        <!-- Add a section to enable webcam -->
+        <p>Hold out your hand and strike a gesture! </p>
+        
+        <button id="webcamButton" class="button1" onClick = "this.style.visibility= 'hidden';">Enable Webcam</button>
+
+        <div class="container" style = "position: relative">
+            
+            <!-- flip video using webkit-transform -->
+            <video id="webcam" class="video" autoplay playsinline ></video> 
+            <canvas id= "c" class = "canvas"></canvas> 
+            <p id = 'predictiontext'></p>
+            
+        </div>
+    </body>
+
+</html>
